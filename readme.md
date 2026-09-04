@@ -2,7 +2,7 @@
 
 A deployed, end-to-end machine learning system that predicts the probability a telecom customer will churn — built to compare multiple models honestly (not just report accuracy), served through a FastAPI backend, and containerized for production deployment.
 
-**Live demo:** `https://telcochurn-fg6e.onrender.com/`
+**Live demo:** https://telcochurn-fg6e.onrender.com/
 **Note:** hosted on Render's free tier, which spins down after ~15 minutes of inactivity. The first request after idle time may take 30–50 seconds to wake up.
 
 ---
