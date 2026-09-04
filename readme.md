@@ -44,7 +44,7 @@ Five classifiers were trained and evaluated on the same held-out test set. Accur
 
 **XGBoost was selected** as the production model. It tied Random Forest on F1-score but with meaningfully higher precision and accuracy, making it the more reliable choice for production use without over-flagging customers as false positives. (Random Forest remains a reasonable alternative if the business explicitly prioritizes catching every possible churner over precision — that's a threshold/business tradeoff, not a modeling one.)
 
-*images\model_comparison.png*
+![Model comparison of 5 classifiers](images/model_comparison.png)
 
 ### 3. Serving
 The trained pipeline (StandardScaler + XGBoost), fitted Box-Cox lambdas, and the exact training feature-column layout are all serialized and loaded at API startup, so a new customer record is transformed identically to how the training data was.
@@ -91,7 +91,7 @@ Then open:
 - `http://127.0.0.1:8000/` — web form
 - `http://127.0.0.1:8000/docs` — interactive API docs (Swagger)
 
-images\form.png
+![Web form](images/form.png)
 
 ### API usage
 
@@ -113,7 +113,7 @@ Response:
 { "churn_probability": 0.8508432507514954 }
 ```
 
-images\prediction.png
+![Prediction result](images/prediction.png)
 
 ---
 
